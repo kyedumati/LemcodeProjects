@@ -1,0 +1,95 @@
+{% extends 'student/base.html' %}
+{% block body_block %}
+
+
+    <div class="card text-center" style="width: 24rem;  margin: auto;border-bottom: 1px solid #1ab9ce;border-right: 1px solid #1ab9ce;box-shadow:8px 7px 11px 1px rgb(206, 233, 236), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);">
+        <div class="card-header card-header-primary" style="width: 24rem;  margin: auto;">
+            <ul class="nav nav-pills nav-pills-success" style="width: 24rem;  margin: auto;">
+                <li class="nav-item"><a class="nav-link active" href="#student_tab" data-toggle="tab" style="color:white;">Student</a></li>
+                <li class="nav-item"><a class="nav-link" href="#dept_tab" data-toggle="tab" style="color:white;">Department</a></li>
+                <li class="nav-item"><a class="nav-link" href="#office_tab" data-toggle="tab" style="color:white;">Office</a></li>
+            </ul>
+        </div>
+
+        <!-- Tab creation and forms-->
+        <div class="tab-content tab-space">
+            <div class="tab-pane active" id="student_tab" data-model-name="student_tab">
+
+                <form action="{% url 'index' %}" method="post" name="student_tab">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username" style="color:black;"><b>USERNAME</b></label></br>
+                        <input type="text" style="width: 15rem; margin: auto;" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color:black;"><b>PASSWORD</b></label></br>
+                        <input type="password" style="width: 15rem; margin: auto;" class="form-control" name="password" placeholder="Enter Password">
+                    </div>
+                    <input type="hidden" value="student_tab" name="tab_selected">
+                    {% if login == 'inactive' %}
+                        <label for="error" style="color: red;">User Inactive! Contact Admin!</label>
+                    {% elif login == 'invalid' %}
+                        <label for="error" style="color: red;">Username or Password Invalid</label>
+                    {% endif%}
+                    {% if tab_error == True %}
+                        <label for="error" style="color: red;">Invalid Tab Selected</label>
+                    {% endif %}
+                    <br>
+
+                    <button type="submit" class="btn btn-info" style="margin-top:20px;">LOGIN</button>
+                </form>
+
+            </div>
+            <div class="tab-pane" id="dept_tab" data-model-name="dept_tab">
+
+                <form action="{% url 'index' %}" method="post" name="dept_tab">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username" style="color:black"><b>EMAIL ADDRESS</b></label>
+                        <input type="email" style="width: 15rem; margin: auto;" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color:black"><b>PASSWORD</b></label>
+                        <input type="password" style="width: 15rem; margin: auto;" class="form-control" name="password" placeholder="Enter Password">
+                    </div>
+                    <input type="hidden" value="dept_tab" name="tab_selected">
+                    {% if login == 'inactive' %}
+                        <label for="error" style="color: red;">User Inactive! Contact Admin!</label>
+                    {% elif login == 'invalid' %}
+                        <label for="error" style="color: red;">Username or Password Invalid</label>
+                    {% endif%}
+                    <br>
+                    <button type="submit" class="btn btn-success" style="margin-top:20px;">LOGIN</button>
+                </form>
+
+            </div>
+            <div class="tab-pane" id="office_tab" data-model-name="office_tab">
+
+                <form action="{% url 'index' %}" method="post" name="office_tab">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username" style="color:black"><b>EMAIL ADDRESS</b></label>
+                        <input type="email" style="width: 15rem; margin: auto;" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color:black"><b>PASSWORD</b></label>
+                        <input type="password" style="width: 15rem; margin: auto;" class="form-control" name="password" placeholder="Enter Password">
+                    </div>
+                    <input type="hidden" value="office_tab" name="tab_selected">
+                    {% if login == 'inactive' %}
+                        <label for="error" style="color: red;">User Inactive! Contact Admin!</label>
+                    {% elif login == 'invalid' %}
+                        <label for="error" style="color: red;">Username or Password Invalid</label>
+                    {% endif%}
+                    <br>
+                    <button type="submit" class="btn btn-info" style="margin-top:20px;" name="submit" id="submit">LOGIN</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

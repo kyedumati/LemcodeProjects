@@ -1,0 +1,122 @@
+{% extends 'student/base_others.html' %}
+{% block body_block %}
+
+    <div class="card" style="width: 100%; margin:auto;">
+        <div class="card-body">
+            <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-lg1" style="float: right; margin-right: 20px; margin-top:30px">
+                Previous Forms
+            </button><br>
+            <br><span style="margin-left: 50px;">Name : {{ faculty_data.name }} </span> <!-- insert from db -->  <span style="margin-right: 250px; float:right;">Dept : {{ faculty_data.dept }} HOD</span><!-- insert from db --><br>
+            <br><br><span style="margin-left: 50px;">FacID : {{ faculty_data.facid }}</span><!-- insert from db -->
+        </div>
+    </div>
+    <br><br>
+    <!-- card and tabs for student details applications -->
+
+    <!-- Dynamic Cards. If exists: Select the rows of data from db. count the no of rows and generate so many cards by placing in loop. -->
+    {% if req_data %}
+        {% for reqsns in req_data %}
+               <br>
+            <div class="card" style="width: 100%; margin: auto;">
+                <div class="card-header">
+                    <h4 class="card-title">ISSUE: {{ reqsns.issue}}</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'student:accept_reject' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="subject" style="color:black"><b>SUBJECT: {{ reqsns.subject }}</b></label>
+                        </div>
+                        <div class="form-group" style="float: right; margin-right: 250px;">
+                            <label for="usn" style="color:black"><b>USN: {{ reqsns.usn.usn }}</b></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="color:black"><b>NAME: {{ reqsns.name }}</b></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason" style="color:black"><b>REASON: {{ reqsns.reason }}</b></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" value="{{ reqsns.reqid }}" name="req_id">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" name='appr_btn' value="1" class="btn btn-info">APPROVE</button>
+                            <button type="submit" name="rej_btn" value="1" style="margin-left: 20px;" class="btn btn-danger">REJECT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br><br>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p class="mb-1"> No Requisitions</p>
+
+    {% endif %}
+
+    <!-- end of card of student-->
+    <!-- Modal for view applications-->
+    <div class="modal fade bd-example-modal-lg1" id="viewapplied" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color: black;">Previous Requisitions::</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="color:black;">
+                    <!-- card for content -->
+                    {% if req_done %}
+                        {% for reqs in req_done %}
+                            <br>
+                            <div class="card" style="width: 100%; margin: auto;">
+                                <div class="card-header">
+                                    <h4 class="card-title">ISSUE: {{ reqs.issue }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="subject" style="color:black"><b>SUBJECT : {{ reqs.subject }}</b></label>
+                                        </div>
+                                        <div class="form-group" style="float: right; margin-right: 250px;">
+                                            <label for="usn" style="color:black"><b>USN : {{ reqs.usn.usn }}</b></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name" style="color:black"><b>NAME:{{ reqs.name }}</b></label>
+                                        </div>
+                                        <div class="form-group" style="float: right; margin-right: 250px;">
+                                            <label for="status" style="color:black"><b>STATUS : {% if reqs.proc_appr == 1 and reqs.hod_appr == 1 %}Approved{% elif reqs.proc_appr == 1 and reqs.hod_appr == 2 %}Rejected{% endif %}</b></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="reason" style="color:black"><b>REASON: {{ reqs.reason }}</b></label>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <br><br>
+                        {% endfor %}
+                    {% else %}
+
+                        <p class="mb-1"> None</p>
+
+                    {% endif %}
+
+                    <!-- end of cards-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

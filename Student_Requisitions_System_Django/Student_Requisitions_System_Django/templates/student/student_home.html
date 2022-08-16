@@ -1,0 +1,191 @@
+{% extends 'student/base_others.html' %}
+{% block body_block %}
+
+
+    <div class="card" style="width: 100%; margin:auto;">
+        <div class="card-body">
+            <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span>
+            <br><span style="margin-left: 50px;">Name : {{ student_data.name }}</span><span style="margin-right: 250px; float:right;">Branch : {{ student_data.dept.upper }}</span>
+            <br><br><span style="margin-left: 55px;">USN : </span>{{ student_data.usn.upper }}<span style="margin-right: 200px; float:right;">Proctor Name : {{ student_data.facid.name }}</span>
+        </div>
+    </div>
+    <br><br>
+    <!-- card and tabs for student details  -->
+    <div class="card card-nav-tabs card-plain" style="width: 100%; margin: auto;">
+        <div class="card-header card-header-danger">
+            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#newapply" data-toggle="tab">Apply</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#applied" data-toggle="tab">View Applications</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body ">
+        <div class="tab-content text-center">
+            <div class="tab-pane active" id="newapply">
+
+                <!-- Form for applying -->
+
+                <br>
+                <section  style="background: #eeeeee;">
+                    <div class="container" style="width: 100%; margin:auto;">
+                        <div class="row" style="margin:0px;">
+                            <div class="col-md-2"></div>
+                            <div class=" col-lg-8 text-center">
+
+                                <form action="{% url 'student:form_submit' %}" method="post">
+                                    {% csrf_token %}
+
+                                    <div class="form-row col-md-12">
+                                        <div class="form-group col-md-5">
+                                            <label for="name" style="color:black;float: left;">NAME</label>
+                                            <input type="text" class="form-control" name="name" value="{{ student_data.name }}" disabled>
+
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="form-group col-md-5">
+                                            <label for="usn" style="color:black;float: left;">USN</label>
+                                            <input type="text" class="form-control" name="usn" value="{{ student_data.usn }}" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row col-md-12">
+                                        <div class="form-group col-md-5">
+                                            <label for="proctor" style="color:black;float: left;">PROCTOR ID</label>
+                                            <input type="text" class="form-control" name="proctor_id" value="{{ student_data.facid.facid }}" disabled>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="form-group col-md-5">
+                                            <label for="phone" style="color:black;float: left;">PHONE NUMBER</label>
+                                            <input type="text" class="form-control" name="phone" value="{{ student_data.phone }}" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row col-md-12">
+                                        <div class="form-group col-md-5">
+                                            <label for="email" style="color:black;float: left;">EMAIL</label>
+                                            <input type="email" class="form-control" id="email" value="{{ student_data.email }}">
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="form-group col-md-5">
+                                            <label for="date" style="color:black;float: left;">DATE</label>
+                                            <input type="text" class="form-control" name="date" value="Current Date and Time will be noted" disabled>
+                                        </div>
+                                    </div>
+                                    <hr style="border-top: 1px solid #52585f;"><br>
+                                    <div class="form-row col-md-12">
+                                        <div class="form-group col-md-5">
+                                            <label for="office_section" style="color:black;float: left;">OFFICE SECTION</label>
+                                            <select name="office_section" class="form-control-range" required>
+                                                <option selected>Choose...</option>
+                                                <option>Admission</option>
+                                                <option>Examination</option>
+                                                <option>Accounts</option>
+                                                <option>Administrative</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1"></div>
+                                        <div class="form-group col-md-5">
+                                            <label for="issue" style="color:black;float: left;">ISSUE</label>
+                                            <select name="issue" class="form-control-range" required>
+                                                <option selected>Choose...</option>
+                                                <option>Study Certificate</option>
+                                                <option>Bonafide Certificate</option>
+                                                <option>Cancellation of Admission</option>
+                                                <option>Course completion certificate</option>
+                                                <option>Fee remittance/refund</option>
+                                                <option>Duplicate fee Receipt</option>
+                                                <option>Expenditure Certificate</option>
+                                                <option>TC Issue</option>
+                                                <option>Scholarship Claims</option>
+                                                <option>Examination Timetable</option>
+                                                <option>Challenge Revaluation</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <label for="subject" style="color:black;float: left;">SUBJECT</label>
+                                        <input type="text" class="form-control" name="subject" placeholder="Enter the Subject for Requisition" required>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <label for="reason" style="color:black;float: left;">REASON</label>
+                                        <input type="text" class="form-control" name="reason" placeholder="Enter the Reason for application" required>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-info">SUBMIT</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                    <br><br>
+
+
+
+
+                <!-- End of Form-->
+            </div>
+            <div class="tab-pane" id="applied">
+
+                {% if req_done %}
+                    {% for reqs in req_done %}
+                        <br>
+                        <div class="card" style="width: 100%; margin: auto;">
+                            <div class="card-header">
+                                <h4 class="card-title">ISSUE: {{ reqs.issue }}</h4>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="subject" style="color:black"><b>SUBJECT : {{ reqs.subject }}</b></label>
+                                    </div>
+                                    <div class="form-group" style="float: right; margin-right: 250px;">
+                                        <label for="usn" style="color:black"><b>USN : {{ reqs.usn.usn }}</b></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" style="color:black"><b>NAME:{{ reqs.name }}</b></label>
+                                    </div>
+                                    <div class="form-group" style="float: right; margin-right: 250px;">
+                                        <label for="status" style="color:black"><b>STATUS : {% if reqs.proc_appr == 1 and reqs.hod_appr == 1 and reqs.office_appr %}Approved{% elif reqs.proc_appr == 2 or reqs.office_appr == 2 or reqs.hod_appr == 2 %}Rejected{% else %}Pending{% endif %}</b></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reason" style="color:black"><b>REASON: {{ reqs.reason }}</b></label>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                    {% endfor %}
+                {% else %}
+
+                    <p class="mb-1"> Not Yet Applied</p>
+
+                {% endif %}
+                <!-- end of cards-->
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    {% if db_handle is True %}
+
+        <script>alert("Requisition Successfully Applied!")</script>
+        db_handle = False
+
+
+    {% endif %}
+
+
+
+{% endblock %}

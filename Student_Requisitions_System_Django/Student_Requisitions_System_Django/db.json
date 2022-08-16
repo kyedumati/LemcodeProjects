@@ -1,0 +1,1096 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "student",
+      "model": "faculty"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "student",
+      "model": "office"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "student",
+      "model": "requisitions"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "student",
+      "model": "student"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4r87ifyxwdbuzjdy1foe8dptt985sw8e",
+    "fields": {
+      "session_data": "MWU2MTdmMmRlM2FkOTI4OTA1YmJlMmRkM2JiNDlmNjFlOWNhMzA5ZTp7fQ==",
+      "expire_date": "2018-12-29T13:54:16.169Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fkl9i55xc0hop4604f1o1b6uvsxe3xhv",
+    "fields": {
+      "session_data": "ODMyMjAxNzFhMWNhNmU3M2ZhMzJhY2Q2ZWZhNTE2NDVjNGZmODJkNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJlOTcyZDlmMjJjNmUzNjNhYjI0MGIxODFjYTA3ZmFmZmQwMzUyNjNjIn0=",
+      "expire_date": "2018-12-31T05:46:22.324Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "mnruxlqjr0gyqqwsr44ultw5c5wspkjz",
+    "fields": {
+      "session_data": "ZTQzZTVmMjc2YjhmZWMzZGU3NjYzYzM3MWRmNGY4ODhkYjBlNzcyZDp7Il9hdXRoX3VzZXJfaWQiOiIxMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZTZiNGRkNWJkNWZkOTlmODU2ZGZlMGFkZWZmOWEyNGRkYjdiZWY0ZiJ9",
+      "expire_date": "2022-08-29T04:57:11.711Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "qfxvsp0ayigdn4jtupnvurh8wr1n1gpi",
+    "fields": {
+      "session_data": "ZTQzZTVmMjc2YjhmZWMzZGU3NjYzYzM3MWRmNGY4ODhkYjBlNzcyZDp7Il9hdXRoX3VzZXJfaWQiOiIxMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZTZiNGRkNWJkNWZkOTlmODU2ZGZlMGFkZWZmOWEyNGRkYjdiZWY0ZiJ9",
+      "expire_date": "2022-08-29T03:10:55.500Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "uorsrom5mrr43exiqmi553y17d9o86ak",
+    "fields": {
+      "session_data": "ODMyMjAxNzFhMWNhNmU3M2ZhMzJhY2Q2ZWZhNTE2NDVjNGZmODJkNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJlOTcyZDlmMjJjNmUzNjNhYjI0MGIxODFjYTA3ZmFmZmQwMzUyNjNjIn0=",
+      "expire_date": "2018-12-29T20:38:20.704Z"
+    }
+  },
+  {
+    "model": "student.faculty",
+    "pk": "cse001",
+    "fields": {
+      "name": "Kavitha Sooda",
+      "dept": "cse",
+      "phone": 9845326978,
+      "email": "kavitha.sooda@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.faculty",
+    "pk": "cse002",
+    "fields": {
+      "name": "Syed Akram",
+      "dept": "cse",
+      "phone": 9856472356,
+      "email": "syed_akram@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.faculty",
+    "pk": "cse003",
+    "fields": {
+      "name": "B G Prasad",
+      "dept": "CSE",
+      "phone": 8657984562,
+      "email": "hod.cse@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.student",
+    "pk": "1bm16cs104",
+    "fields": {
+      "name": "Shrinidhi P Shetty",
+      "dept": "CSE",
+      "facid": "cse001",
+      "phone": 9482481106,
+      "email": "1bm16cs104@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.student",
+    "pk": "1bm16cs109",
+    "fields": {
+      "name": "Suhas M Suresh",
+      "dept": "cse",
+      "facid": "cse001",
+      "phone": 9663623383,
+      "email": "1bm16cs109@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.student",
+    "pk": "1bm16cs110",
+    "fields": {
+      "name": "Sumukha R Nadig",
+      "dept": "cse",
+      "facid": "cse002",
+      "phone": 9425678555,
+      "email": "1bm16cs110@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.student",
+    "pk": "1bm16cs115",
+    "fields": {
+      "name": "T A Vishwas",
+      "dept": "CSE",
+      "facid": "cse002",
+      "phone": 9456855476,
+      "email": "1bm16cs115@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.student",
+    "pk": "1bm16cs123",
+    "fields": {
+      "name": "Vatsav S M",
+      "dept": "CSE",
+      "facid": "cse002",
+      "phone": 8865997745,
+      "email": "1bm16cs123@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.student",
+    "pk": "EAE0234567",
+    "fields": {
+      "name": "Adones Evangelista",
+      "dept": "BSIT",
+      "facid": "cse001",
+      "phone": 91222222,
+      "email": "ado@gmail.com"
+    }
+  },
+  {
+    "model": "student.office",
+    "pk": "offacc001",
+    "fields": {
+      "name": "Shivaraj",
+      "office_section": "Accounts",
+      "phone": 9878985886,
+      "email": "account_office@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.office",
+    "pk": "offadd001",
+    "fields": {
+      "name": "Krishna Kumar",
+      "office_section": "Administrative",
+      "phone": 7586945889,
+      "email": "admin_office@bmsce.ac.in"
+    }
+  },
+  {
+    "model": "student.requisitions",
+    "pk": "BoAd4",
+    "fields": {
+      "name": "T A Vishwas",
+      "usn": "1bm16cs115",
+      "facid": "cse002",
+      "phone": 9456855476,
+      "email": "1bm16cs115@bmsce.ac.in",
+      "date": "2018-12-17T11:17:12Z",
+      "subject": "In need of Bonafide Certificate",
+      "office_section": "Admission",
+      "issue": "Bonafide Certificate",
+      "reason": "To apply for FFE Scholarship",
+      "proc_appr": 1,
+      "hod_appr": 1,
+      "office_appr": 1
+    }
+  },
+  {
+    "model": "student.requisitions",
+    "pk": "TCAc21",
+    "fields": {
+      "name": "T A Vishwas",
+      "usn": "1bm16cs115",
+      "facid": "cse002",
+      "phone": 9456855476,
+      "email": "1bm16cs115@bmsce.ac.in",
+      "date": "2018-12-17T11:25:02Z",
+      "subject": "Requiring TC issue",
+      "office_section": "Accounts",
+      "issue": "TC Issue",
+      "reason": "Leaving College",
+      "proc_appr": 2,
+      "hod_appr": 0,
+      "office_appr": 0
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add faculty",
+      "content_type": 7,
+      "codename": "add_faculty"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change faculty",
+      "content_type": 7,
+      "codename": "change_faculty"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete faculty",
+      "content_type": 7,
+      "codename": "delete_faculty"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view faculty",
+      "content_type": 7,
+      "codename": "view_faculty"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add office",
+      "content_type": 8,
+      "codename": "add_office"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change office",
+      "content_type": 8,
+      "codename": "change_office"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete office",
+      "content_type": 8,
+      "codename": "delete_office"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view office",
+      "content_type": 8,
+      "codename": "view_office"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add requisitions",
+      "content_type": 9,
+      "codename": "add_requisitions"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change requisitions",
+      "content_type": 9,
+      "codename": "change_requisitions"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete requisitions",
+      "content_type": 9,
+      "codename": "delete_requisitions"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view requisitions",
+      "content_type": 9,
+      "codename": "view_requisitions"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add student",
+      "content_type": 10,
+      "codename": "add_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change student",
+      "content_type": 10,
+      "codename": "change_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete student",
+      "content_type": 10,
+      "codename": "delete_student"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view student",
+      "content_type": 10,
+      "codename": "view_student"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "student",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "department",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+      "name": "office",
+      "permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$W1GCdn3VrDt3$gEEln405ugQb72YtZPSjUlLe6QhnXlfjl3B8zqbs1YM=",
+      "last_login": "2018-12-16T19:16:51.311Z",
+      "is_superuser": false,
+      "username": "1bm16cs109@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-15T11:34:48Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$PEZXUsot6c3i$5YITbNjchkzmqYwxGLehBNEoPYwoXHlGCONJuHcBE68=",
+      "last_login": "2018-12-16T10:25:11.178Z",
+      "is_superuser": false,
+      "username": "1bm16cs110@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-15T11:35:12Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$rw93Zdny7OEg$K/XQ/hPJLTzEPtTmljBZq+F8ToeVOliqZ0QtJ8em1OI=",
+      "last_login": "2018-12-16T19:19:25.137Z",
+      "is_superuser": false,
+      "username": "kavitha.sooda@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-15T11:35:37Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$W1hj9vBmjU0D$2ASKFG6D8dfJr051sFCn6elvPzjeGlsysbZpx+j2cQQ=",
+      "last_login": "2021-06-14T04:11:18Z",
+      "is_superuser": true,
+      "username": "admin_office@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-06-14T04:11:20Z",
+      "groups": [
+        3
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$5b1i8zTdRxpJ$3NzuV2gVkNRgf3HehhZuO3yzvro56H1Nl1b/FX0+0uM=",
+      "last_login": "2018-12-17T05:53:33.709Z",
+      "is_superuser": false,
+      "username": "account_office@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-15T11:39:57.225Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$2DKz3tkG010h$ek90WRblzl5V4hgWAdgJFrwxpwW+s7aZ7mFfcCI67rY=",
+      "last_login": "2018-12-17T05:55:24.702Z",
+      "is_superuser": false,
+      "username": "syed_akram@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-15T11:43:37Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$uoJKQUBRrgxZ$RhKC19PZxj56CG3mmIPLn/IvMOhcDml/hp7wuC2zBTk=",
+      "last_login": "2018-12-17T05:52:46.902Z",
+      "is_superuser": false,
+      "username": "hod.cse@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-15T11:44:08Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$2BtMXsEbn8Ei$u0WmCwT2toPoyyV0Y8AcalrAA4xOmTEPC+X2KBmmb90=",
+      "last_login": "2021-06-14T04:13:02Z",
+      "is_superuser": false,
+      "username": "adzkie@gmail.com",
+      "first_name": "adones",
+      "last_name": "flores",
+      "email": "ado@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-06-14T04:13:03Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$120000$FZi4Hy0k3Oxm$6LUEdqSyCrh/jRwzQUEU1DeSnm9EspdvhF54Hp4aWRg=",
+      "last_login": "2018-12-17T05:55:52.609Z",
+      "is_superuser": false,
+      "username": "1bm16cs115@bmsce.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-12-16T05:07:01.414Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$8nxFL4GWtlE3w0qU1MOqTk$u3jHn98ciEQ7J0sPvBWuOYyMiAiZIKts6j3ErqTgWNA=",
+      "last_login": "2021-06-14T04:21:17.218Z",
+      "is_superuser": true,
+      "username": "admin1",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-06-14T03:55:17.587Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$rcl3A5sTqKRF3uFKgHbge2$vLAnbDYBxx+lgIy3mi6JapBNPdayYdf1In2Ca1pk9aE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "adzkie",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-06-14T04:13:51.126Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$FLiRM8QaEAyA$ZP/vyrji1GQmxBqrqiQj5wasSWG+PiAywcczB9xGJ24=",
+      "last_login": "2022-08-15T04:57:11.701Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-15T03:01:02.476Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$3TFcyXx8lPoq$wVDDFGmOz/cXiHh7AbYy9wvRzNBx5sryOEUT4Mxtz6A=",
+      "last_login": "2022-08-15T03:08:03.521Z",
+      "is_superuser": false,
+      "username": "testuser@gmail.com",
+      "first_name": "kasi",
+      "last_name": "yedumati",
+      "email": "testuser@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-15T03:05:51Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2021-06-14T03:59:54.983Z",
+      "user": 11,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2021-06-14T04:01:51.435Z",
+      "user": 11,
+      "content_type": 10,
+      "object_id": "EAE0234567",
+      "object_repr": "Student object (EAE0234567)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2021-06-14T04:11:24.799Z",
+      "user": 11,
+      "content_type": 4,
+      "object_id": "5",
+      "object_repr": "admin_office@bmsce.ac.in",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\", \"Last login\", \"Date joined\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2021-06-14T04:13:34.728Z",
+      "user": 11,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "ado",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Email address\", \"Superuser status\", \"Last login\", \"Date joined\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2021-06-14T04:13:51.824Z",
+      "user": 11,
+      "content_type": 4,
+      "object_id": "12",
+      "object_repr": "adzkie",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2021-06-14T04:18:46.119Z",
+      "user": 11,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "adzkie@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"Staff status\", \"Superuser status\", \"Groups\", \"User permissions\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2022-08-15T03:05:51.458Z",
+      "user": 13,
+      "content_type": 4,
+      "object_id": "14",
+      "object_repr": "testuser@gmail.com",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2022-08-15T03:07:48.908Z",
+      "user": 13,
+      "content_type": 4,
+      "object_id": "14",
+      "object_repr": "testuser@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\", \"email\", \"groups\", \"user_permissions\"]}}]"
+    }
+  }
+]

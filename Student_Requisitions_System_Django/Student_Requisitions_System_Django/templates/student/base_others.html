@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student System</title>
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="{% static 'assets/css/material-kit.css' %}" rel="stylesheet" />
+    <!--   Core JS Files   -->
+    <script src="{% static 'assets/js/core/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'assets/js/core/bootstrap-material-design.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'assets/js/plugins/moment.min.js' %}"></script>
+</head>
+<body>
+
+<!-- Navbar at the top start-->
+<nav class="navbar sticky-top navbar-expand-lg bg-success">
+    <div class="container">
+        <div class="navbar-brand" href="#"><b>Student Requisition</b>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center" style="width: 50%">
+
+            
+
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+        </button>
+
+        <div class="collapse nav navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                {% if user.is_authenticated %}
+
+                    <li class="nav-item active">
+                        <a class="btn btn-rose"  href="{% url 'home' %}">Home </a>
+                    </li>
+
+                {% else %}
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'index' %}">Home </a>
+                    </li>
+                {% endif %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'depts' %}">Departments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="{% url 'contactus' %}">Contact Us</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% endif %}
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- navbar at the top end -->
+
+<p class="mb-1">
+
+<div class="container">
+    {% block body_block %}
+
+        <!-- Anything outide of this will be inherited. -->
+
+    {% endblock %}
+</div>
+
+</p>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+{% extends 'student/base_others.html' %}
+{% block body_block %}
+
+    <div class="card" style="width: 100%; margin:auto;">
+        <div class="card-body">
+            <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span><br>
+            <br><span style="margin-left: 50px;">Name : {{ office_data.name }} </span> <!-- insert from db -->  <span style="margin-right: 250px; float:right;">Section : {{ office_data.office_section }}</span><!-- insert from db --><br>
+            <br><br><span style="margin-left: 50px;">OfficeId : {{ office_data.office_id }}</span><!-- insert from db -->
+        </div>
+    </div>
+    <br><br>
+    <!-- card and tabs for student details applications -->
+
+    <!-- Dynamic Cards. If exists: Select the rows of data from db. count the no of rows and generate so many cards by placing in loop. -->
+    <div class="card card-nav-tabs card-plain" style="width: 80%; margin: auto;">
+        <div class="card-header card-header-danger">
+    <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+            <ul class="nav nav-tabs" data-tabs="tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#newapply" data-toggle="tab">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#applied" data-toggle="tab">View Cleared Forms</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="card-body ">
+        <div class="tab-content text-center">
+            <div class="tab-pane active" id="newapply">
+            <br>
+    {% if req_data %}
+        {% for reqsns in req_data %}
+
+            <div class="card" style="width: 100%; margin: auto;">
+                <div class="card-header">
+                    <h4 class="card-title">ISSUE: {{ reqsns.issue}}</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'student:accept_reject' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="subject" style="color:black"><b>SUBJECT: {{ reqsns.subject }}</b></label>
+                        </div>
+                        <div class="form-group" style="float: right; margin-right: 250px;">
+                            <label for="usn" style="color:black"><b>USN: {{ reqsns.usn.usn }}</b></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" style="color:black"><b>NAME: {{ reqsns.name }}</b></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason" style="color:black"><b>REASON: {{ reqsns.reason }}</b></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" value="{{ reqsns.reqid }}" name="req_id">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" name='appr_btn' value="1" class="btn btn-info">APPROVE</button>
+                            <button type="submit" name="rej_btn" value="1" style="margin-left: 20px;" class="btn btn-danger">REJECT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br><br>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p class="mb-1"> No Requisitions</p>
+
+    {% endif %}
+
+            </div>
+            <div class="tab-pane" id="applied">
+
+                {% if req_done %}
+                    {% for reqs in req_done %}
+                        <br>
+                        <div class="card" style="width: 100%; margin: auto;">
+                            <div class="card-header">
+                                <h4 class="card-title">ISSUE: {{ reqs.issue }}</h4>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="subject" style="color:black"><b>SUBJECT : {{ reqs.subject }}</b></label>
+                                    </div>
+                                    <div class="form-group" style="float: right; margin-right: 250px;">
+                                        <label for="usn" style="color:black"><b>USN : {{ reqs.usn.usn }}</b></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" style="color:black"><b>NAME:{{ reqs.name }}</b></label>
+                                    </div>
+
+                                    <div class="form-group" style="float: left; margin-left: 100px">
+                                        <label for="reason" style="color:black"><b>REASON: {{ reqs.reason }}</b></label>
+                                    </div>
+                                    <div class="form-group" style="float: right; margin-right: 250px;">
+                                        <label for="status" style="color:black"><b>STATUS : {% if reqs.office_appr == 1 %}Approved{% elif reqs.office_appr == 2 %}Rejected{% endif %}</b></label>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                        <br><br>
+                    {% endfor %}
+                {% else %}
+
+                    <p class="mb-1"> None</p>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- end of card of student-->
+
+
+
+
+
+{% endblock %}
